@@ -29,6 +29,15 @@ public class BasicServlet extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	
 		logger.debug("basicServlet.doGet()");
+
+		// 만약에 log level을 debug보다 높은 레벨로 설정할 경우
+		// 로그를 생성하지는 않지만 메소드 인자인 문자열 + 문자열 ==> 문자열 결합 연산은 발생한다.
+		
+		//
+	//	if(설정로그레벨 <= debug) {
+		logger.debug("basicServlet.doGet() userid parameter : " + req.getParameter("userid"));
+	//	}
+		logger.debug("basicServlet.doGet() userid parameter : {} {}" , req.getParameter("userid"), req.getParameter("password"));
 		
 		//doxxx 메소드의 인자 : req, res
 		// GET,POST, DELETE, PUSH, HEAD.... : HTTP 메소드

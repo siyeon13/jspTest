@@ -22,4 +22,17 @@
   	<servlet-name>basicServlet</servlet-name>
   	<url-pattern>/basicServlet</url-pattern>
   </servlet-mapping>
+  
+  <!-- servlet 등록, 해당 서블릿에서 처리를 할 url 등록 -->
+  <servlet>
+  	<servlet-name>TimesTableServlet</servlet-name>
+  	<servlet-class>kr.or.ddit.servlet.basic.TimesTableServlet</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  	<!-- 값이 작은거 부터 시작 -->
+  </servlet>
+  <!-- servlet에서 처리할 url 매핑 -->
+  <servlet-mapping>
+  	<servlet-name>TimesTableServlet</servlet-name>
+  	<url-pattern>/TimesTableServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
