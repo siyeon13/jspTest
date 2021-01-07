@@ -47,4 +47,39 @@
     <servlet-name>SumCalculation</servlet-name>
     <url-pattern>/sumCalculation</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MulCalculation</display-name>
+    <servlet-name>MulCalculation</servlet-name>
+    <servlet-class>kr.or.ddit.servlet.scope.MulCalculation</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MulCalculation</servlet-name>
+    <url-pattern>/MulCalculation</url-pattern>
+  </servlet-mapping>
+  
+    <error-page>
+  	<!-- class full name : 패키지.클래스명 -->
+  	<exception-type>java.lang.ArithmeticException</exception-type>
+  	<location>/error/type/ariError.jsp</location>
+  </error-page>
+  <error-page>
+  	<!-- class full name : 패키지.클래스명 -->
+  	<exception-type>javax.management.RuntimeErrorException</exception-type>
+  	<location>/error/type/runError.jsp</location>
+  </error-page>
+  
+  <!-- error page 설정 -->
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/error/404/404.jsp</location>
+  </error-page>
+  
+  <error-page>
+  	<error-code>500</error-code>
+  	<location>/error/500/500.jsp</location>
+  </error-page>
+  
+
+  
 </web-app>
