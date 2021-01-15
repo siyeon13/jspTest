@@ -82,7 +82,7 @@
         <label for="inputEmail" class="sr-only">userid</label>
         <input type="text" id="userid" class="form-control" placeholder="사용자 아이디" required autofocus name="userid" >
         <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="pass" class="form-control" placeholder="Password" required name="pass" value="brownpass">
+        <input type="password" id="pass" class="form-control" placeholder="Password" required name="pass" value="brownPass">
         <div class="checkbox">
           <label>
             <input type="checkbox" id="rememberme" value="remember-me"> Remember me
