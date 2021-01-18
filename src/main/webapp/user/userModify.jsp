@@ -15,8 +15,8 @@
 <title>Jsp</title>
 
 <%@ include file="/common/common_lib.jsp" %>
-<link href="<%=request.getContextPath()%>/css/dashboard.css" rel="stylesheet">
-<link href="<%=request.getContextPath()%>/css/blog.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/css/dashboard.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/css/blog.css" rel="stylesheet">
 
 <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
@@ -76,16 +76,16 @@
 			<div class="col-sm-3 col-md-2 sidebar">
 				<ul class="nav nav-sidebar">
 					<li class="active"><a href="#">Main <span class="sr-only">(current)</span></a></li>
-					<li class="active"><a href="<%=request.getContextPath()%>/alluser">전체 사용자</a></li>
-					<li class="active"><a href="<%=request.getContextPath()%>/emplist">직원</a></li>
-					<li class="active"><a href="<%=request.getContextPath()%>/pagingUser?page=1&pageSize=5">사용자 페이징 리스트</a></li>
+					<li class="active"><a href="${pageContext.request.contextPath}/alluser">전체 사용자</a></li>
+					<li class="active"><a href="${pageContext.request.contextPath}/emplist">직원</a></li>
+					<li class="active"><a href="${pageContext.request.contextPath}/pagingUser?page=1&pageSize=5">사용자 페이징 리스트</a></li>
 				</ul>
 			</div>
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 			<%UserVo vo= (UserVo)request.getAttribute("user"); %>
 
 
-				<form class="form-horizontal" role="form" action="<%=request.getContextPath()%>/userModify" method="post">
+				<form class="form-horizontal" role="form" action="${pageContext.request.contextPath}/userModify" method="post">
 				<input type="hidden" name="userid" value="<%=vo.getUserid() %>"/>
 					
 					<div class="form-group">

@@ -16,14 +16,14 @@
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link href="<%=request.getContextPath()%>/css/bootstrap.min.css"
+<link href="${pageContext.request.contextPath}/css/bootstrap.min.css"
 	rel="stylesheet">
 <!-- Bootstrap core CSS -->
-<script src="<%=request.getContextPath()%>/js/bootstrap.js"></script>
+<script src="${pageContext.request.contextPath}/js/bootstrap.js"></script>
 <!-- Custom styles for this template -->
-<link href="<%=request.getContextPath()%>/css/dashboard.css"
+<link href="${pageContext.request.contextPath}/css/dashboard.css"
 	rel="stylesheet">
-<link href="<%=request.getContextPath()%>/css/blog.css"
+<link href="${pageContext.request.contextPath}/css/blog.css"
 	rel="stylesheet">
 </head>
 
@@ -61,8 +61,8 @@
 			<div class="col-sm-3 col-md-2 sidebar">
 				<ul class="nav nav-sidebar">
 					<li class="active"><a href="#">Main <span class="sr-only">(current)</span></a></li>
-					<li class="active"><a href="<%=request.getContextPath() %>/alluser">사용자</a></li>
-					<li class="active"><a href="<%=request.getContextPath() %>/emp">직원</a></li>
+					<li class="active"><a href="${pageContext.request.contextPath}/alluser">사용자</a></li>
+					<li class="active"><a href="${pageContext.request.contextPath}/emp">직원</a></li>
 				</ul>
 			</div>
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">

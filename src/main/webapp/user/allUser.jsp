@@ -2,6 +2,7 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,9 +54,9 @@
 <div class="col-sm-3 col-md-2 sidebar">
 	<ul class="nav nav-sidebar">
 		<li class="active"><a href="#">Main <span class="sr-only">(current)</span></a></li>
-		<li class="active"><a href="<%=request.getContextPath() %>/alluser">사용자</a></li>
-		<li class="active"><a href="<%=request.getContextPath()%>/pagingUser?page=1&pageSize=5">사용자 페이징리스트</a></li>
-		<li class="active"><a href="<%=request.getContextPath() %>/emp">직원</a></li>
+		<li class="active"><a href="${pageContext.request.contextPath}/alluser">사용자</a></li>
+		<li class="active"><a href="${pageContext.request.contextPath}/pagingUser?page=1&pageSize=5">사용자 페이징리스트</a></li>
+		<li class="active"><a href="${pageContext.request.contextPath}/emp">직원</a></li>
 	</ul>
 </div><div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 				
@@ -71,34 +72,22 @@
 					<th>사용자 별명</th>
 					<th>등록일시</th>
 				</tr>
-<%
+<%-- <%
   List<UserVo> list = (List<UserVo>)request.getAttribute("userList");
- 
 %>
-
-  <%
-  	if(list != null){
-     for(int i=0; i<list.size(); i++){
-    	UserVo  vo = list.get(i);
-    	
-  %>     
-      
-    	
-
+ --%>
+    	<c:forEach items="${userList }" var="user">
 				<tr>
-					<td><%= vo.getUserid()%></td>
-					<td><%= vo.getUsernm()%></td>
-					<td><%= vo.getAlias()%></td>
-					<td><%= vo.getReg_dt_fmt()%></td>
+					<td>${user.userid}</td>
+					<td>${user.usernm }</td>
+					<td>${user.alias }</td>
+					<td>${user.getReg_dt_fmt()}</td>
 				</tr>
-				
- <%  } } %>
- 				
-
+		</c:forEach>		
 			</table>
 		</div>
 
-		<a href="<%=request.getContextPath()%>/user/registUser.jsp" class="btn btn-default pull-right">사용자 등록</a>
+		<a href="${pageContext.request.contextPath}/user/registUser.jsp" class="btn btn-default pull-right">사용자 등록</a>
 
 		<div class="text-center">
 			<ul class="pagination">

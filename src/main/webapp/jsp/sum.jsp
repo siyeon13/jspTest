@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="<%=request.getContextPath() %>/Calculation" method="post">
+	<form action="${pageContext.request.contextPath}/Calculation" method="post">
 		<label>start</label><input type="text" name="start"/><br>
 		<label>end</label><input type="text" name="end"/><br>
 		<button type="submit" >click</button>

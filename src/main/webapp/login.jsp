@@ -21,7 +21,7 @@
 
 
     <!-- Custom styles for this template -->
-    <link href="<%=request.getContextPath() %>/css/signin.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/css/signin.css" rel="stylesheet">
 	
 	
 	<script>
@@ -77,7 +77,7 @@
     <div class="container">
 
       <form class="form-signin" id="frm"
-      		action="<%=request.getContextPath()%>/loginController" method="post">
+      		action="${pageContext.request.contextPath}/loginController" method="post">
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="inputEmail" class="sr-only">userid</label>
         <input type="text" id="userid" class="form-control" placeholder="사용자 아이디" required autofocus name="userid" >
