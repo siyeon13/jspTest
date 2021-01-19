@@ -75,7 +75,8 @@
   <body>
 
     <div class="container">
-
+	UNT_CD : ${param.UNT_CD } / <%=request.getParameter("UNT_CD") %> <br><br>
+	
       <form class="form-signin" id="frm"
       		action="${pageContext.request.contextPath}/loginController" method="post">
         <h2 class="form-signin-heading">Please sign in</h2>
