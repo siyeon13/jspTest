@@ -12,7 +12,7 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 // web에 filter 작성하지 않고 어노테이션으로 필터 작성
 
-@WebFilter("/*")
+/*@WebFilter("/*")*/
 public class DefaultParameterFilter implements Filter{
 
 	@Override
