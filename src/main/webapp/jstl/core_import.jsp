@@ -13,16 +13,5 @@
 		<c:param name="query" value="코로나"></c:param>
 	
 	</c:import>
-
-	
-
-
-
-
-
-
-
-
-
 </body>
 </html>

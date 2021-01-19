@@ -32,7 +32,9 @@ public class RegistUser extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.setCharacterEncoding("utf-8");
+		// servlet의 doPost 메소드 마다 실행 필요 => Filter
+		//req.setCharacterEncoding("utf-8");
+		
 		String userid = req.getParameter("userId");
 		String usernm = req.getParameter("usernm");
 		String pass = req.getParameter("pass");
