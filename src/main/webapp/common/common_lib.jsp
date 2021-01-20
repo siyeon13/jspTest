@@ -4,9 +4,9 @@
 
     
 <!-- Bootstrap core CSS -->
-    <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${cp}/css/bootstrap.min.css" rel="stylesheet">
 	
 	<script
 	src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	
-	<script src="${pageContext.request.contextPath}js/bootstrap.js"></script>
+	<script src="${cp}js/bootstrap.js"></script>

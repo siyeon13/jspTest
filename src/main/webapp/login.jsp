@@ -21,7 +21,7 @@
 
 
     <!-- Custom styles for this template -->
-    <link href="${pageContext.request.contextPath}/css/signin.css" rel="stylesheet">
+    <link href="${cp}/css/signin.css" rel="stylesheet">
 	
 	
 	<script>
@@ -75,10 +75,12 @@
   <body>
 
     <div class="container">
-	UNT_CD : ${param.UNT_CD } / <%=request.getParameter("UNT_CD") %> <br><br>
+	UNT_CD : ${param.UNT_CD } / <%=request.getParameter("UNT_CD") %> <br>
+	cp : ${cp }/ <%=application.getAttribute("cp") %>
+	<br>
 	
       <form class="form-signin" id="frm"
-      		action="${pageContext.request.contextPath}/loginController" method="post">
+      		action="${cp}/loginController" method="post">
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="inputEmail" class="sr-only">userid</label>
         <input type="text" id="userid" class="form-control" placeholder="사용자 아이디" required autofocus name="userid" >

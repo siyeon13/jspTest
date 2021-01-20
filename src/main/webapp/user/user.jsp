@@ -17,8 +17,8 @@
 <title>Jsp</title>
 
 <%@ include file="/common/common_lib.jsp" %>
-<link href="${pageContext.request.contextPath}/css/dashboard.css" rel="stylesheet">
-<link href="${pageContext.request.contextPath}/css/blog.css" rel="stylesheet">
+<link href="${cp}/css/dashboard.css" rel="stylesheet">
+<link href="${cp}/css/blog.css" rel="stylesheet">
 <script>
 /* 	사용자 수정 : method : get action = /userModify
 	사용자 삭제 : method : post, action = /deleteUser
@@ -27,13 +27,13 @@
 $(function(){
 	$("#modifyBtn").on("click", function(){
 		$("#frm").attr("method", "get");
-		$("#frm").attr("action", "${pageContext.request.contextPath}/userModify");
+		$("#frm").attr("action", "${cp}/userModify");
 		$("#frm").submit();
 	});
 	
 	$("#deleteBtn").on("click", function(){
 		$("#frm").attr("method", "post");
-		$("#frm").attr("action", "${pageContext.request.contextPath}/deleteUser");
+		$("#frm").attr("action", "${cp}/deleteUser");
 		$("#frm").submit();
 	});
 	
@@ -77,9 +77,9 @@ $(function(){
 			<div class="col-sm-3 col-md-2 sidebar">
 				<ul class="nav nav-sidebar">
 					<li class="active"><a href="#">Main <span class="sr-only">(current)</span></a></li>
-					<li class="active"><a href="${pageContext.request.contextPath}/alluser">전체 사용자</a></li>
-					<li class="active"><a href="${pageContext.request.contextPath}/emplist">직원</a></li>
-					<li class="active"><a href="${pageContext.request.contextPath}/pagingUser?page=1&pageSize=5">사용자 페이징 리스트</a></li>
+					<li class="active"><a href="${cp}/alluser">전체 사용자</a></li>
+					<li class="active"><a href="${cp}/emplist">직원</a></li>
+					<li class="active"><a href="${cp}/pagingUser?page=1&pageSize=5">사용자 페이징 리스트</a></li>
 				</ul>
 			</div>
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -92,7 +92,7 @@ $(function(){
 					<div class="form-group">
 						<label for="userNm" class="col-sm-2 control-label">사용자 사진</label>
 						<div class="col-sm-10">
-						<img alt="" src="${pageContext.request.contextPath}/profile/${user.userid }.png">
+						<img alt="" src="${cp}/profile/${user.userid }.png">
 						</div>
 					</div>
 

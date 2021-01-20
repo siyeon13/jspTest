@@ -20,9 +20,9 @@
 <title>Jsp</title>
 
 <%@ include file="/common/common_lib.jsp" %>
-<link href="${pageContext.request.contextPath}/css/dashboard.css"
+<link href="${cp}/css/dashboard.css"
 	rel="stylesheet">
-<link href="${pageContext.request.contextPath}/css/blog.css" rel="stylesheet">
+<link href="${cp}/css/blog.css" rel="stylesheet">
 <script>
 //문서 로딩이 완료되고 나서 실행되는 영역
 $(function(){
@@ -41,7 +41,7 @@ $(function(){
 </head>
 
 <body>
-<form id="frm" action="${pageContext.request.contextPath}/user">
+<form id="frm" action="${cp}/user">
 	<input type="hidden" id="userid" name="userid" value=""/>
 </form>
 
@@ -77,9 +77,9 @@ $(function(){
 			<div class="col-sm-3 col-md-2 sidebar">
 				<ul class="nav nav-sidebar">
 					<li class="active"><a href="#">Main <span class="sr-only">(current)</span></a></li>
-					<li class="active"><a href="${pageContext.request.contextPath}/alluser">전체 사용자</a></li>
-					<li class="active"><a href="${pageContext.request.contextPath}/emplist">직원</a></li>
-					<li class="active"><a href="${pageContext.request.contextPath}/pagingUser?page=1&pageSize=5">사용자 페이징 리스트</a></li>
+					<li class="active"><a href="${cp}/alluser">전체 사용자</a></li>
+					<li class="active"><a href="${cp}/emplist">직원</a></li>
+					<li class="active"><a href="${cp}/pagingUser?page=1&pageSize=5">사용자 페이징 리스트</a></li>
 				</ul>
 			</div>
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -108,7 +108,7 @@ $(function(){
 							</table>
 						</div>
 
-						<a class="btn btn-default pull-right" href="${pageContext.request.contextPath}/user/registUser.jsp">사용자 등록</a>
+						<a class="btn btn-default pull-right" href="${cp}/user/registUser.jsp">사용자 등록</a>
 
 						<div class="text-center">
 					<%-- 		<%
@@ -118,7 +118,7 @@ $(function(){
 							
 							<ul class="pagination">
 								 <li class="prev"><a
-									href="${pageContext.request.contextPath}/pagingUser?page=1&pageSize=${pageVo.getPageSize()}">«</a>
+									href="${cp}/pagingUser?page=1&pageSize=${pageVo.getPageSize()}">«</a>
 								</li> 
 						<%-- 		<%
 								for (int i = 1; i <=pagination ; i++) {
@@ -136,7 +136,7 @@ $(function(){
 
 										<c:otherwise>
 											<li><a
-												href="${pageContext.request.contextPath}/pagingUser?page=${i }&pageSize=${pageVo.getPageSize()}">${i }</a></li>
+												href="${cp}/pagingUser?page=${i }&pageSize=${pageVo.getPageSize()}">${i }</a></li>
 										</c:otherwise>
 
 									</c:choose>
@@ -144,7 +144,7 @@ $(function(){
 
 
 								<li class="next"><a
-									href="${pageContext.request.contextPath}/pagingUser?page=${pagination}&pageSize=${pageVo.getPageSize()}">»</a>
+									href="${cp}/pagingUser?page=${pagination}&pageSize=${pageVo.getPageSize()}">»</a>
 								</li> 
 							</ul>
 						</div>

@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<form action="${pageContext.request.contextPath}/sc" method="post">
+<form action="${cp}/sc" method="post">
 	<input type="text" name="scope" value="brown"/><br>
 	<button type="submit" value="전송"></button>
 	
